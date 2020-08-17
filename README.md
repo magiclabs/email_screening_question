@@ -13,11 +13,12 @@ word for it 😇). As there are multiple parts to the question, do not feel the 
 of the parts, instead please feel free to stop once you've crossed the two hour mark. If you were in
 the midst of a question, feel free to leave some pseudocode for how you would've completed it.
 
-You'll find the dataset for the questions in `data.csv`. The dataset represents temperatures reported
-by specific weather stations (`station_id`) at a particular point in time (`date`).
-For simplicity the `date` values are simply numeric values between `1` and `8`, and represents distinct
-points in time. I.e the *time* of a temperature reported on `date = 1` by `station_id = 1` is equivalent
-to that of a temperature reported on `date = 1` by `station_id = 2` (and so on).
+You'll find the dataset for the questions in `data.csv` after unzipping `data.csv.zip`. The dataset
+represents temperatures reported by specific weather stations (`station_id`) at a particular point
+in time (`date`). The first 4 digits of the `date` value represents the year that the temperature was
+collected, the second 3 digit portion appearing after the `.` represents a unique point during the
+year such that no two days within the year has the same 3 digit representation.
+
 
 **Part 1**:
 
@@ -27,12 +28,12 @@ lowest temperature. If a tie occurs simply return one pair at random.
 **Part 2**:
 
 Create a function that returns the `station_id` that experienced the most amount of temperature
-fluctuation across the 8 dates that it reported temperatures for. For example with the following dataset:
+fluctuation across all dates that it reported temperatures for. For example with the following dataset:
 
-    station_id, date, temperature_c
-             1,    1,             5
-             1,    2,             0
-             1,    3,             5
+    station_id,     date, temperature_c
+             1, 2000.001,             5
+             1, 2000.123,             0
+             1, 2000.456,             5
 
 we are expecting the total fluctuation to be 10 degrees, as opposed to 0 which is the net difference
 in temperature between the first and last dates.
@@ -40,4 +41,5 @@ in temperature between the first and last dates.
 **Part 3**:
 
 Create a function that will return the `station_id` that experienced the most amount of temperature
-fluctuation for any given range of dates.
+fluctuation for any given range of dates. I.e to get the result of 10 degrees from part 2 above, we
+would expect the input dates to be `2000.001` and `2000.456`.
