@@ -13,15 +13,12 @@
 
 ### **Code Aspects:**
 
-- **Architecture** : Code layout and architecture for the given frameworks and libraries you use
-- **Technology** Choices: What are some of the tradeoffs that you made to pick the technologies (frameworks, libraries, etc.) you used?
-- **Code Quality** : Is the code easy to read and maintainable? Consistent styling andbest practices for the languages used.
-- **UX** : Is the interface easy and intuitive to use?
-- **Testing** : Untested code is bad code. How are tests being set up? Is it easy to change if the service requirements are changed?
-
-- **Security** : What are some of the considerations that you've had to make sure the
-
-service is secure? Any obvious vulnerabilities?
+- **Architecture**: Code layout and architecture for the given frameworks and libraries you use
+- **Technology**: What are some of the tradeoffs that you made to pick the technologies (frameworks, libraries, etc.) you used?
+- **Code Quality**: Is the code easy to read and maintainable? Consistent styling andbest practices for the languages used.
+- **UX**: Is the interface easy and intuitive to use?
+- **Testing**: Untested code is bad code. How are tests being set up? Is it easy to change if the service requirements are changed?
+- **Security**: What are some of the considerations that you've had to make sure the service is secure? Any obvious vulnerabilities?
 
 ### **Project** :
 
