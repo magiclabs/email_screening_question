@@ -42,3 +42,5 @@ Film Locations in SF
 
 - Dataset:
   - [https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am](https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am)
+  
+### Please DON'T include any public and secret keys in your project. Instead, please let us know the third-party services that you use if any
