@@ -7,10 +7,13 @@ exercise we are mainly looking for the following elements:
 * test coverage
 
 In other words, the end product should be something that you wouldn't hesitate to hit shippit on and
-productionize! Feel free to tackle the question with your programming language of choice.
+productionize! Feel free to tackle the question with your programming language of choice. If you choose
+to use libraries to help you accomplish the task at hand, we ask that you leave plenty room in your work
+to showcase your algorithms, design, and CS prowess.
+
 We expect each candidate to spend no more than 2 hours on the solution (we'll take your
-word for it 😇). As there are multiple parts to the question, do not feel the need to complete all
-of the parts, instead please feel free to stop once you've crossed the two hour mark. If you were in
+word for it 😇). As there are multiple parts to the question, do not feel the need to complete it
+all, instead please feel free to stop once you've crossed the two hour mark. If you were in
 the midst of a question, feel free to leave some pseudocode for how you would've completed it.
 
 You'll find the dataset for the questions in `data.csv` after unzipping `data.csv.zip`. The dataset
