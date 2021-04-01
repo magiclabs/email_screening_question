@@ -7,7 +7,7 @@ exercise we are mainly looking for the following elements:
 * test coverage
 
 In other words, the end product should be something that you wouldn't hesitate to hit shippit on and
-productionize! Feel free to tackle the question with your programming language of choice. If you choose
+productionize! We expect the solution to be written in **Python**, if you choose
 to use libraries to help you accomplish the task at hand, we ask that you leave plenty room in your work
 to showcase your algorithms, design, and CS prowess.
 
