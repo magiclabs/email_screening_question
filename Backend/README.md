@@ -1,5 +1,4 @@
 ## Problem
----
 Thank you for taking the time out of your day to tackle this problems set with us! We expect the solution to be
 written in **Python**, if you choose to use libraries to help you accomplish the task at hand,
 we ask that you leave plenty room in your work to showcase your **algorithms**, and **design** skillsets.
@@ -41,7 +40,6 @@ fluctuation for any given range of dates. I.e to get the result of 10 degrees fr
 would expect the input dates to be `2000.001` and `2000.456`.
 
 ## Evaluation Criteria
----
 We will be evaluating your submission based on the following criteria, in no particular order:
 
 * Readability: Consistent styling, aptly named functions, and variables.
