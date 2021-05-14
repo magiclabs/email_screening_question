@@ -1,15 +1,7 @@
-Hey there, thanks for taking the time out of your day to tackle this problems set with us! In this
-exercise we are mainly looking for the following elements:
-
-* correctness
-* coherent code structure
-* readability
-* test coverage
-
-In other words, the end product should be something that you wouldn't hesitate to hit shippit on and
-productionize! We expect the solution to be written in **Python**, if you choose
-to use libraries to help you accomplish the task at hand, we ask that you leave plenty room in your work
-to showcase your algorithms, design, and CS prowess.
+## Problem
+Thank you for taking the time out of your day to tackle this problems set with us! We expect the solution to be
+written in **Python**, if you choose to use libraries to help you accomplish the task at hand,
+we ask that you leave plenty room in your work to showcase your **algorithms**, and **design** skillsets.
 
 We expect each candidate to spend no more than 2 hours on the solution (we'll take your
 word for it 😇). As there are multiple parts to the question, do not feel the need to complete it
@@ -46,3 +38,14 @@ in temperature between the first and last dates.
 Create a function that will return the `station_id` that experienced the most amount of temperature
 fluctuation for any given range of dates. I.e to get the result of 10 degrees from part 2 above, we
 would expect the input dates to be `2000.001` and `2000.456`.
+
+## Evaluation Criteria
+We will be evaluating your submission based on the following criteria, in no particular order:
+
+* Readability: Consistent styling, aptly named functions, and variables.
+* Coherent Design: Where applicable, sensisble abstractions are employed, functions are well intentioned.
+* Test coverage: The solution is tested, and proveably functions correctly.
+* Correctness
+
+In other words, the end product should be something that you wouldn't hesitate to hit shippit on and
+productionize!
