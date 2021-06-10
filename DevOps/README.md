@@ -2,6 +2,7 @@
   - [Requirements](#requirements)
 - [Task](#task)
   - [How to check](#how-to-check)
+- [Evaluation Criteria](#evaluation-criteria)
 
 # Overview
 Usually it's more comfortable to use Terraform modules than just "long" manifests. This repo contains `state-metrics` K8s service namespace and deployment manifest. 
@@ -32,3 +33,8 @@ In order to check if `state-metrics` is working just follow these steps:
   ```sh
   curl ${STATE_METRICS_POD_IP}:18081/metrics
   ```
+
+# Evaluation Criteria
+We will be evaluating your submission based on the following criteria, in no particular order:
+* Readability: Consistent styling, aptly named functions, and variables.
+* Correctness: In other words, the end product should be something that you wouldn't hesitate to hit shippit on and productionize!
