@@ -22,7 +22,7 @@ In order to check if `state-metrics` is working just follow these steps:
 
 1. Get `state-metrics` pod ip with
   ```sh
-  get pods -o wide --all-namespaces | grep state
+  kubectl get pods -o wide --all-namespaces | grep state
   ```
 2. Run some container with `curl` installed inside K8s with shell. For example:
   ```sh
