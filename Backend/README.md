@@ -1,7 +1,9 @@
 ## Problem
 Thank you for taking the time out of your day to tackle this problems set with us! We expect the solution to be
-written in **Python**, if you choose to use libraries to help you accomplish the task at hand,
+written in **Python**, if you choose to use libraries (i.e **pandas**) to help you accomplish the task at hand,
 we ask that you leave plenty room in your work to showcase your **algorithms**, and **design** skillsets.
+If you are unsure about how much usage is too much, we would err on the side of minimizing 3rd party library
+foot print, this helps ensure we have as much material as possible to evaluate your abilities as an engineer.
 
 We expect each candidate to spend no more than 2 hours on the solution (we'll take your
 word for it 😇). As there are multiple parts to the question, do not feel the need to complete it
