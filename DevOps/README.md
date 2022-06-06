@@ -5,13 +5,16 @@
 - [Evaluation Criteria](#evaluation-criteria)
 
 # Overview
-Usually it's more comfortable to use Terraform modules than just "long" manifests. This repo contains `state-metrics` K8s service namespace and deployment manifest. 
+Usually it's more comfortable to use Terraform modules than just "long" manifests. This repo contains `state-metrics` K8s service namespace and deployment manifest.
 
 ## Requirements
-* Local K8s cluster
+* Local K8s cluster >= v1.24
 
-# Task 
+# Task
 * Install `state-metrics` with given terraform manifests (you may need to update `config_path` in the `_provider.tf` file)
+  ```
+  terraform apply
+  ```
 * Modify code to make `state-metrics` to be presented as module.
 * Migrate currently deployed service from "plain manifest" to terraform module.
   * No pod should be recreated during the migration

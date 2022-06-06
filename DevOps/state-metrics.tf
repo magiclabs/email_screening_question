@@ -1,3 +1,17 @@
+resource "kubernetes_secret" "state_metrics_local_sa_token" {
+  provider = kubernetes.local
+
+  metadata {
+    name      = "state-metrics-token"
+    namespace = kubernetes_namespace.mon_local.metadata[0].name
+    annotations = {
+      "kubernetes.io/service-account.name" = "state-metrics"
+    }
+  }
+
+  type = "kubernetes.io/service-account-token"
+}
+
 resource "kubernetes_service_account" "state_metrics_local" {
   provider = kubernetes.local
 
@@ -11,6 +25,10 @@ resource "kubernetes_service_account" "state_metrics_local" {
       app = "state-metrics"
     }
   }
+
+  depends_on = [
+    kubernetes_secret.state_metrics_local_sa_token
+  ]
 }
 
 resource "kubernetes_cluster_role" "state_metrics_local" {
