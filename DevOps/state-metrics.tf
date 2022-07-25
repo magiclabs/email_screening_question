@@ -1,3 +1,26 @@
+/*
+  NOTE: Using `kubernetes_manifest` resource due to a bug in the terraform provider. Details can be found here:
+  https://github.com/hashicorp/terraform-provider-kubernetes/issues/1724#issuecomment-1139450178
+*/
+resource "kubernetes_manifest" "state_metrics_local_sa" {
+  provider = kubernetes.local
+
+  manifest = {
+    apiVersion = "v1"
+    kind       = "ServiceAccount"
+    metadata = {
+      namespace = kubernetes_namespace.mon_local.metadata[0].name
+      name      = "state-metrics"
+
+      labels = {
+        app = "state-metrics"
+      }
+    }
+
+    automountServiceAccountToken = false
+  }
+}
+
 resource "kubernetes_secret" "state_metrics_local_sa_token" {
   provider = kubernetes.local
 
@@ -5,30 +28,11 @@ resource "kubernetes_secret" "state_metrics_local_sa_token" {
     name      = "state-metrics-token"
     namespace = kubernetes_namespace.mon_local.metadata[0].name
     annotations = {
-      "kubernetes.io/service-account.name" = "state-metrics"
+      "kubernetes.io/service-account.name" = kubernetes_manifest.state_metrics_local_sa.manifest.metadata.name
     }
   }
 
   type = "kubernetes.io/service-account-token"
-}
-
-resource "kubernetes_service_account" "state_metrics_local" {
-  provider = kubernetes.local
-
-  automount_service_account_token = false
-
-  metadata {
-    name      = "state-metrics"
-    namespace = kubernetes_namespace.mon_local.metadata[0].name
-
-    labels = {
-      app = "state-metrics"
-    }
-  }
-
-  depends_on = [
-    kubernetes_secret.state_metrics_local_sa_token
-  ]
 }
 
 resource "kubernetes_cluster_role" "state_metrics_local" {
@@ -153,7 +157,7 @@ resource "kubernetes_cluster_role_binding" "state_metrics_local" {
 
   subject {
     kind      = "ServiceAccount"
-    name      = kubernetes_service_account.state_metrics_local.metadata[0].name
+    name      = kubernetes_manifest.state_metrics_local_sa.manifest.metadata.name
     namespace = kubernetes_namespace.mon_local.metadata[0].name
     api_group = ""
   }
@@ -226,7 +230,7 @@ resource "kubernetes_deployment" "state_metrics_local" {
 
       spec {
         enable_service_links            = false
-        service_account_name            = kubernetes_service_account.state_metrics_local.metadata[0].name
+        service_account_name            = kubernetes_manifest.state_metrics_local_sa.manifest.metadata.name
         automount_service_account_token = true
 
         host_network = true
