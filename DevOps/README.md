@@ -13,6 +13,7 @@ Usually it's more comfortable to use Terraform modules than just "long" manifest
 # Task
 * Install `state-metrics` with given terraform manifests (you may need to update `config_path` in the `_provider.tf` file)
   ```
+  terraform init
   terraform apply
   ```
 * Modify code to make `state-metrics` to be presented as module.
