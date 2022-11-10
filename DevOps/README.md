@@ -40,5 +40,5 @@ In order to check if `state-metrics` is working just follow these steps:
 
 # Evaluation Criteria
 We will be evaluating your submission based on the following criteria, in no particular order:
-* Readability: Consistent styling, aptly named functions, and variables.
+* Readability: Consistent styling, properly named functions, and variables.
 * Correctness: In other words, the end product should be something that you wouldn't hesitate to hit shippit on and productionize!
